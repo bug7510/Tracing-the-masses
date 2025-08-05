@@ -1,0 +1,7 @@
+@startuml
+class ClearScene {
+    + Retry() : void
+    + Quit() : void
+}
+MonoBehaviour <|-- ClearScene
+@enduml

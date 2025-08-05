@@ -1,0 +1,10 @@
+@startuml
+class "PropertyArray`1"<PropertyType> {
+    + PropertyArray(size:int)
+    + <<virtual>> Set(index:int, value:PropertyType) : void
+    + <<virtual>> Get(index:int) : PropertyType
+}
+interface "IProperty`1"<PropertyType> {
+}
+"IProperty`1" "<PropertyType>" <|-- "PropertyArray`1"
+@enduml

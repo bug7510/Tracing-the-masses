@@ -1,0 +1,12 @@
+@startuml
+class ButtonHandler {
+    + IsEnabledButton : bool <<set>> <<get>>
+    + OnPointerEnter(eventData:PointerEventData) : void
+    + OnPointerExit(eventData:PointerEventData) : void
+    + OnPointerClick(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- ButtonHandler
+IPointerClickHandler <|-- ButtonHandler
+IPointerEnterHandler <|-- ButtonHandler
+IPointerExitHandler <|-- ButtonHandler
+@enduml

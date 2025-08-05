@@ -1,0 +1,18 @@
+@startuml
+class Collection2dExtension <<static>> {
+    + {static} For(collection:List<List<ElementType>>, startValue:int, conditionCheck:Func<int, bool>, increment:Func<int, int>, loopAction:ForActionIn2d<ElementType>) : void
+    + {static} For(collection:List<List<ElementType>>, startValue:int, conditionCheck:Func<int, bool>, increment:Func<int, int>, loopAction:ForActionInIndex<ElementType>) : void
+    + {static} For(collection:List<List<ElementType>>, endValue:int, loopAction:ForActionIn2d<ElementType>, startValue:int) : void
+    + {static} For(collection:List<List<ElementType>>, endValue:int, loopAction:ForActionInIndex<ElementType>, startValue:int) : void
+    + {static} Foreach(collection:List<List<ElementType>>, loopAction:ForActionIn2d<ElementType>) : void
+    + {static} Foreach(collection:List<List<ElementType>>, loopAction:ForActionInIndex<ElementType>) : void
+    + {static} Foreach(collection:List<List<ElementType>>, loopAction:Action<ElementType>) : void
+    + {static} For(collection:List<List<ElementType>>, startValue:int, conditionCheck:Func<int, bool>, increment:Func<int, int>, loopAction:ForFuncIn2d<ElementType, TReturn>) : List<TReturn>
+    + {static} For(collection:List<List<ElementType>>, startValue:int, conditionCheck:Func<int, bool>, increment:Func<int, int>, loopAction:ForFuncInIndex<ElementType, TReturn>) : List<TReturn>
+    + {static} For(collection:List<List<ElementType>>, endValue:int, loopAction:ForFuncIn2d<ElementType, TReturn>, startValue:int) : List<TReturn>
+    + {static} For(collection:List<List<ElementType>>, endValue:int, loopAction:ForFuncInIndex<ElementType, TReturn>, startValue:int) : List<TReturn>
+    + {static} Foreach(collection:List<List<ElementType>>, loopAction:ForFuncIn2d<ElementType, TReturn>) : List<TReturn>
+    + {static} Foreach(collection:List<List<ElementType>>, loopAction:ForFuncInIndex<ElementType, TReturn>) : List<TReturn>
+    + {static} Foreach(collection:List<List<ElementType>>, loopAction:Func<ElementType, TReturn>) : List<TReturn>
+}
+@enduml

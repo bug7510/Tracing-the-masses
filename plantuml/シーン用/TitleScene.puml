@@ -1,0 +1,7 @@
+@startuml
+class TitleScene {
+    + StartGame() : void
+    + Quit() : void
+}
+MonoBehaviour <|-- TitleScene
+@enduml

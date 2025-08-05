@@ -1,0 +1,5 @@
+@startuml
+class SceneReferenceExtension <<static>> {
+    + {static} LoadScene(targetSceneRef:SceneReference, loadSceneMode:LoadSceneMode) : void
+}
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class GameTime {
+    + {static} isGaming : bool
+    + {static} WaitGame() : WaitUntil
+    + {static} Time : float <<get>> = 0
+    + {static} WaitGameTime(seconds:float) : WaitUntil
+}
+MonoBehaviour <|-- GameTime
+@enduml

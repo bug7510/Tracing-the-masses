@@ -1,0 +1,6 @@
+@startuml
+class EventHandlerDisposable {
+    +  <<event>> Event : EventHandler 
+    + Invoke() : void
+}
+@enduml

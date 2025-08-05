@@ -1,0 +1,45 @@
+@startuml
+enum Phase {
+    tracing,
+    modeling,
+}
+enum Harass {
+    none= 0,
+    bigger= 1,
+    dummy= 2,
+    fading= 4,
+    rotate90= 8,
+    rotate45= 16,
+    rotateInTracing90= 32,
+    rotateInTracing45= 64,
+}
+class GameSceneManager {
+    + {static} MapSize : int <<set>> <<get>>
+    + playerTracing : bool
+    + {static} EvaluateListSimilarity(list1:List<Type>, list2:List<Type>) : int
+    + {static} CanMove : bool <<set>> <<get>>
+    + Retry() : void
+}
+class RandomPathGenerator {
+    + GenerateRandomPath(gridSize:int) : List<Vector2Int>
+}
+enum Edge {
+    Top,
+    Left,
+    Bottom,
+    Right,
+}
+enum Direction {
+    Up,
+    Left,
+    Down,
+    Right,
+}
+GameTime <|-- GameSceneManager
+GameSceneManager --> "instance" GameSceneManager
+GameSceneManager o-> "phase" Phase
+GameSceneManager o-> "pathGenerator" RandomPathGenerator
+GameSceneManager --> "PlayerPosition" Vector2Int
+RandomPathGenerator +-- Edge
+RandomPathGenerator +-- Direction
+@enduml

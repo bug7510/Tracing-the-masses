@@ -1,0 +1,26 @@
+@startuml
+class AllMass {
+    + ResizeMap(sideLength:int) : void
+    + {static} CanClick : bool <<set>> <<get>>
+    + AllPhase() : void
+    + OnPlayerLeft() : void
+    + OnPlayerRight() : void
+    + OnPlayerDown() : void
+    + OnPlayerUp() : void
+}
+class InMassObject {
+    + willFade : bool = false
+    + InMassObject(objectColor:Color)
+    + Set(objectColor:Color) : void
+}
+MonoBehaviour <|-- AllMass
+AllMass --> "instance" AllMass
+AllMass o-> "notExistsPos" Vector2Int
+AllMass --> "defaultDummyColor" Color
+AllMass --> "player" InMassObject
+AllMass --> "model" InMassObject
+AllMass --> "dummy" InMassObject
+AllMass +-- InMassObject
+InMassObject --> "objectColor" Color
+InMassObject --> "NowPosition" Vector2Int
+@enduml

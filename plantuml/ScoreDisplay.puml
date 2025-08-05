@@ -1,0 +1,9 @@
+@startuml
+class ScoreDisplay {
+    + Rotate(angle:int) : void
+    + Score(score:int) : void
+    + Complete() : void
+    + PhaseText() : void
+}
+MonoBehaviour <|-- ScoreDisplay
+@enduml

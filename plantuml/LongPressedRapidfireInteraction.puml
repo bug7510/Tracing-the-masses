@@ -1,0 +1,9 @@
+@startuml
+class LongPressedRapidfireInteraction {
+    + duration : float = 0.2f
+    + pressPoint : float = 0.5f
+    + Process(context:InputInteractionContext) : void
+    + Reset() : void
+}
+IInputInteraction <|-- LongPressedRapidfireInteraction
+@enduml

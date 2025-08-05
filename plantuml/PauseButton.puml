@@ -1,0 +1,15 @@
+@startuml
+class PauseButton {
+    + Rotate(angle:int) : void
+    + PhaseColor() : void
+    + OnPointerClick(eventData:PointerEventData) : void
+    + OnPointerEnter(eventData:PointerEventData) : void
+    + OnPointerExit(eventData:PointerEventData) : void
+    + BackTo1stScene() : void
+    + QuitGame() : void
+}
+MonoBehaviour <|-- PauseButton
+IPointerEnterHandler <|-- PauseButton
+IPointerExitHandler <|-- PauseButton
+IPointerClickHandler <|-- PauseButton
+@enduml

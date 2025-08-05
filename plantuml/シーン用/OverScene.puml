@@ -1,0 +1,7 @@
+@startuml
+class OverScene {
+    + Retry() : void
+    + Quit() : void
+}
+MonoBehaviour <|-- OverScene
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+class DOTweenExtension <<static>> {
+    + {static} OnPauseInUpdate(targetTween:T, action:TweenCallback) : T
+    + {static} SetDependency(targetTween:T, dependency:Func<bool>) : T
+}
+class DOTweenExtensionBehaviour {
+    +  <<event>> OnUpdate : TweenCallback 
+}
+DOTweenExtension +-- DOTweenExtensionBehaviour
+MonoBehaviour <|-- DOTweenExtensionBehaviour
+@enduml

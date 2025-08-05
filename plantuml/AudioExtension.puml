@@ -1,0 +1,5 @@
+@startuml
+class AudioExtension <<static>> {
+    + {static} PlayRandomPitchSound(audioClip:AudioClip, gameObject:GameObject, minPitch:float, maxPitch:float) : void
+}
+@enduml

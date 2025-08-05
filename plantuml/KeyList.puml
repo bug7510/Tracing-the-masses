@@ -1,0 +1,6 @@
+@startuml
+class KeyList {
+    + {static} scoreKey : string = "score"
+    + {static} highScoreKey : string = "highScore"
+}
+@enduml

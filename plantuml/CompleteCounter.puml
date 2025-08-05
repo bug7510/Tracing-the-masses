@@ -1,0 +1,8 @@
+@startuml
+class CompleteCounter {
+    + Rotate(angle:int) : void
+    + Score(score:int) : void
+    + PhaseText() : void
+}
+MonoBehaviour <|-- CompleteCounter
+@enduml

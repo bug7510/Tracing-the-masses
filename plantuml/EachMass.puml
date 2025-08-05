@@ -1,0 +1,19 @@
+@startuml
+class EachMass {
+    + Set(x:int, y:int, eventHandler:Action<Vector2Int>) : void
+    + Reset() : void
+    + EachPhase() : void
+    + EachFade() : void
+    + duration : float
+    + ColorChange(color:Color) : void
+    + OnPointerClick(eventData:PointerEventData) : void
+    + OnPointerEnter(eventData:PointerEventData) : void
+    + OnPointerExit(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- EachMass
+IPointerClickHandler <|-- EachMass
+IPointerEnterHandler <|-- EachMass
+IPointerExitHandler <|-- EachMass
+EachMass o-> "tracingColor" Color
+EachMass o-> "modelingColor" Color
+@enduml

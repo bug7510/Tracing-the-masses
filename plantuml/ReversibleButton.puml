@@ -1,0 +1,7 @@
+@startuml
+class ReversibleButton {
+    + <<virtual>> OnClick() : void
+    + OnCursorInOrOut(isCursorIn:bool) : void
+}
+MonoBehaviour <|-- ReversibleButton
+@enduml
